@@ -88,8 +88,7 @@ class _NotePageState extends State<NotePage> {
                         // высота должна быть 70 так как там будут кнопки
                         const SizedBox(height: 70),
                         titleTextField(titleCon),
-                        // в будещем true будет меняться, если будет false то TextField будет не доступным
-                        // и пользователю будет удобно читать заметки
+                        // в будещем true будет меняться, если будет false то TextField будет не доступным и пользователю будет удобно читать заметки
                         textField(descCon, true),
                       ],
                     ),

@@ -3,13 +3,7 @@ import 'package:intl/intl.dart';
 
 import '../../note/note_page.dart';
 
-Widget noteCard(
-  BuildContext context,
-  int id,
-  String title,
-  String desc,
-  String category,
-) {
+Widget noteCard(BuildContext context, int id, String title, String desc, String category) {
   String formattedDate = DateFormat('E, d MMM').format(
     DateTime.fromMillisecondsSinceEpoch(id * 1000),
   );
@@ -20,13 +14,7 @@ Widget noteCard(
         context,
         MaterialPageRoute(
           builder: (BuildContext context) {
-            return NotePage(
-              id: id,
-              title: title,
-              desc: desc,
-              category: category,
-              isNew: false,
-            );
+            return NotePage(id: id, title: title, desc: desc, category: category, isNew: false);
           },
         ),
       );

@@ -11,14 +11,7 @@ import './widgets/title_text_field.dart';
 import './widgets/bottom_bar.dart';
 
 class NotePage extends StatefulWidget {
-  const NotePage({
-    super.key,
-    required this.id,
-    required this.title,
-    required this.desc,
-    required this.category,
-    required this.isNew,
-  });
+  const NotePage({super.key, required this.id, required this.title, required this.desc, required this.category, required this.isNew});
 
   final int id;
   final String title;
@@ -74,13 +67,7 @@ class _NotePageState extends State<NotePage> {
         return WillPopScope(
           // если нажать на кнопку назад на устройстве, то измененные заметки сохранятся
           onWillPop: () async {
-            cubit.addItemToRow(
-              widget.id,
-              titleCon.text,
-              descCon.text,
-              widget.category,
-              widget.isNew,
-            );
+            cubit.addItemToRow(widget.id, titleCon.text, descCon.text, widget.category, widget.isNew);
             navigator.navigate(context, '/home');
             // если false то возвращаться назад можно только через навигатор
             return false;
@@ -117,13 +104,7 @@ class _NotePageState extends State<NotePage> {
                             Icons.arrow_back,
                             () {
                               // кнопка назад вызывается ту же функцию как и on will pop
-                              cubit.addItemToRow(
-                                widget.id,
-                                titleCon.text,
-                                descCon.text,
-                                widget.category,
-                                widget.isNew,
-                              );
+                              cubit.addItemToRow(widget.id, titleCon.text, descCon.text, widget.category, widget.isNew);
                               navigator.navigate(context, '/home');
                             },
                           ),

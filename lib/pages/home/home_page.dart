@@ -42,13 +42,7 @@ class HomePage extends StatelessWidget {
                               children: [
                                 // делает for loop чтобы показать заметок в ряд по категориям
                                 for (var index in cubit.notes[category]) ...[
-                                  noteCard(
-                                    context,
-                                    index[0],
-                                    index[1],
-                                    index[2],
-                                    category,
-                                  )
+                                  noteCard(context, index[0], index[1], index[2], category)
                                 ],
                                 // в конце ряда будет кнопка для добавления новых заметок в этот же ряд
                                 addButton(context, category),

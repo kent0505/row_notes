@@ -10,13 +10,7 @@ Widget addButton(BuildContext context, String category) {
         context,
         MaterialPageRoute(
           builder: (BuildContext context) {
-            return NotePage(
-              id: 0,
-              title: '',
-              desc: '',
-              category: category,
-              isNew: true,
-            );
+            return NotePage(id: 0, title: '', desc: '', category: category, isNew: true);
           },
         ),
       );

@@ -7,14 +7,9 @@ import '../../cubit/note_cubit.dart';
 import '../note/widgets/my_button.dart';
 import './widgets/category_field.dart';
 import './widgets/save_button.dart';
-// import 'widgets/color_pick.dart';
 
 class CategoryPage extends StatefulWidget {
-  const CategoryPage({
-    super.key,
-    required this.category,
-    required this.isNew,
-  });
+  const CategoryPage({super.key, required this.category, required this.isNew});
 
   final String category;
   final bool isNew;
@@ -43,9 +38,6 @@ class _CategoryPageState extends State<CategoryPage> {
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<NoteCubit>();
-
-    print('CATEGORY1');
-    print('CATEGORY2');
 
     return BlocBuilder<NoteCubit, Map>(
       builder: (context, state) {
@@ -86,8 +78,7 @@ class _CategoryPageState extends State<CategoryPage> {
                       ),
                     ),
                     categoryField(categoryCon),
-                    // colorPick(),
-                    // ЕСЛИ ЭТО НОВАЯ КАТЕГОРИЯ
+                    // если это новая категория
                     if (widget.isNew) ...[
                       saveButton(
                         'Create',
@@ -97,7 +88,7 @@ class _CategoryPageState extends State<CategoryPage> {
                         },
                       ),
                     ] else ...[
-                      // ЕСЛИ ЭТО УЖЕ СУЩЕСТВУЕЩАЯ КАТЕГОРИЯ
+                      // если это уже существующая категория
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [

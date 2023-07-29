@@ -10,10 +10,7 @@ Widget addRowButton(BuildContext context) {
         context,
         MaterialPageRoute(
           builder: (BuildContext context) {
-            return const CategoryPage(
-              category: '',
-              isNew: true,
-            );
+            return const CategoryPage(category: '', isNew: true);
           },
         ),
       );

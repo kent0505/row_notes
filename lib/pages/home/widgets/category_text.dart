@@ -11,10 +11,7 @@ Widget categoryText(BuildContext context, String category) {
           context,
           MaterialPageRoute(
             builder: (BuildContext context) {
-              return CategoryPage(
-                category: category,
-                isNew: false,
-              );
+              return CategoryPage(category: category, isNew: false);
             },
           ),
         );
